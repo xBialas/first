@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function silnia(i){
+                if (i==1){
+                    return 1;
+                }
+                else{
+                    i*silnia(i-1);
+                }
+                document.write(i);
+            }
+
+
+        </script>
+
+<input id="number">
+<input type="button" onclick="silnia" value="silnia">
+
+
+
+        
+
+
+    </body>
+</html>
