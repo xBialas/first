@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            function draba(d, x)
+            {
+                var a = parseFloat(d);
+                var b = parseFloat(x);
+
+
+               var c = Math.pow(a,2) + Math.pow(b,2);
+               var d = Math.sqrt(c);
+
+              document.write(a);
+
+
+            }
+            </script>
+    </head>
+    <body>
+<form onsubmit="draba(this.d.value,this.x.value )">
+Podaj d=<input type="number" name="d"/> <br>
+Podaj x=<input type="number" name="x"/> <br>
+<input type="submit" value="oblicz"/> <br>
+</form>
+<div id="drabina"></div>
+
+    
+    </body>
+
+</html>
