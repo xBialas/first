@@ -1,0 +1,43 @@
+<html> 
+<head>
+<script language="JavaScript">
+ function obw(a,b)
+{
+ var a_licz=parseFloat(a);
+ var b_licz=parseFloat(b);
+var obw = (a*2) + (b*2);
+alert("Obwod="+obw);
+}
+</script>
+
+<script>
+function pole(a,b)
+{
+    var a_licz=parseFloat(a);
+   var b_licz=parseFloat(b);
+
+   var pole = a_licz * b_licz;
+   alert("Pole="+pole);
+}
+
+
+
+
+</script>
+
+
+</head> 
+<body> 
+ Obwod i pole prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit=" obw(this.a.value,this.b.value);pole(this.a.value,this.b.value);return false"> 
+
+ Podaj a=
+<input  size="6"  name="a">
+ Podaj b=
+<input  size="6"  name="b">
+<input  TYPE="submit"  Value="oblicz" > <br>
+</form>
+ 
+</body> 
+</html>

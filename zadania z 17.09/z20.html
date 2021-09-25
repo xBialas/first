@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+<script>
+function pole(a,b,h)
+{
+var a_git = parseFloat(a);
+var b_git = parseFloat(b);
+var h_git = parseFloat(h);
+var p =  ((a_git + b_git) * h_git) / 2;
+alert("Pole: "+p);
+}
+
+function obw(a,b,h)
+{
+var a_git = parseFloat(a);
+var b_git = parseFloat(b);
+var h_git = parseFloat(h);
+var c = Math.pow(h_git  + (a_git - b_git)/2,2);   
+var c1 = Math.sqrt(c);
+var ob = a_git + b_git + (c1 *2);
+alert("obwód: " + ob);
+}
+</script>
+<h1>TRAPEZ</h1>
+<form name ="formularz" onsubmit="pole(this.gitba1.value, this.gitba2.value, this.gitba3.value); obw(this.gitba1.value, this.gitba2.value, this.gitba3.value);">
+Podaj a: <input type="number" name="gitba1"/><br><br>
+Podaj b: <input type="number" name="gitba2"/><br><br>        
+Podaj h: <input type="number" name="gitba3"/><br><br>        
+<input type="submit" value = "obgit"/>
+</form>
+</body>
+</html>
