@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+function losowanko()
+{
+var losowanie = Math.floor((Math.random()*100)+1);
+document.getElementById("pog").innerHTML = losowanie;
+}
+</script>
+<script>
+function fibonaci(m)
+{
+if(m<=2)
+{
+return 1;
+}
+else
+{
+return fibonaci(m-1) + fibonaci(m-2);
+}
+}
+function fibo()
+{
+var m = prompt("Podaj liczbę fibonaci: ");
+for(i=1; i<=m; i++)
+{
+document.write(fibonaci(i) + "<br>");
+}
+} 
+</script>
+<script>
+function silnia(git)
+{
+if(git==0)
+{
+return 1;
+}
+else
+{
+return silnia(git-1)*git;
+}    
+}
+function pog3()
+{
+var git = prompt("Podaj silnie: ");
+document.getElementById("pog2").innerHTML = silnia(git);
+}
+</script>
+</head>
+<body>
+<input type="submit" value="silnia" onclick="pog3()"/>
+<input type="submit" value="los" onclick="losowanko()"/>
+<input type="submit" value="fibonaci" onclick="fibo()"/>
+<div id="pog"></div>
+<div id="pog2"></div>
+</body>
+</html>
