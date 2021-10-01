@@ -1,0 +1,240 @@
+<html>
+<head>
+    <title>CV tak o</title>
+    <style type="text/css">
+
+        #menu {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 0px;
+            top: 0px;
+            background-color: lightblue;
+           
+        }
+
+        #skills{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 0px;
+            top: 500px;
+            background-color: rgb(16, 190, 190);
+            
+            
+        
+            
+        }
+
+        #content{
+            position: absolute;
+            width: 1400px;
+            height: 1000px;
+            display: block;
+            left: 500px;
+            top: 0px;
+            background-color: rgb(215, 216, 216);
+            font-size: 60px;
+            
+        }
+
+        #aha{
+            font-size: 20px;
+
+        }
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div id="menu"> 
+<h1>Jan Białas</h1>
+<img src="ryba.jfif" alt="ryba">
+<h3>Dane osobowe:</h3>
+<b>Telefon</b><br>
++48 123 456 789<br><br>
+
+<b>E-mail</b><br>
+janekjanek@elo.pl<br>
+
+</div>
+
+
+<div id="skills">
+<h3>Umiejetnosci:</h3>
+<ul>
+<li>Granie w komputer,</li><br>
+<li>Spanie,</li><br>
+<li>Jedzenie</li><br>
+</ul>
+</div>
+
+
+<div id="content">
+    Nazywam się Janek, chodzę do 4 klasy technikum.
+    Pierwsze doświadczenie z  grania w komputer zdobyłem na lekcji z 
+    Panem Kołodko. Nauczyłem się też spać i jeść na lekcjach<br><br>
+    <a href="git.html">Moje dzieła sztuki</a><br>
+
+
+
+
+   
+    <h5>Kalkulator  do podatków</h5>
+    <p id="aha">Przychody: <input type="number" id="przychody"/></p>
+
+    <p id="aha">Podatek<select id="nazwy">
+        <option value="liniowy">Liniowy</option>
+        <option value="progresywny">progresywny</option>
+    </select></p>
+    <input type="submit" value="oblicz" onclick = "podatki()" /> 
+
+    <p id="aha">ryczałty<select id="ryczalciki">
+        <option value="a">Wolne zawody</option>
+        <option value="b">programista </option>
+        <option value="c">przy najmie prywatnym</option>
+        <option value="d">roboty budowlane</option>
+        <option value="e">gastronomia</option>
+        <option value="f">sprzedaz ŚT i wyposażenia</option>
+    </select></p>
+
+    <input type="submit" value="oblicz" onclick = "podatki2()" /> 
+
+    <div id="wynik"></div><div id="wynik2"></div>
+    
+    
+    
+   
+
+
+</div>
+
+
+
+
+<script>
+    function podatki()
+    {
+        var piniodz = parseFloat(przychody.value);
+        var podatk = nazwy.value;
+        var podatk2 = ryczalciki.value;
+    
+        switch(podatk)
+        {
+
+            case 'liniowy':
+                piniodz2 = piniodz * 0.19;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+            break;
+
+            case 'progresywny':
+                if(piniodz<85528)
+                {
+                 piniodz2 = piniodz * 0.17;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl"; 
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl"; 
+                }
+                else{
+                    piniodz2 = piniodz * 0.32;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl"; 
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";  
+                }
+            break;
+
+
+    
+        }
+        
+        }
+
+
+
+
+
+        function podatki2()
+    {
+        var piniodz = parseFloat(przychody.value);
+        var piniodz2 = 0;
+        var podatk2 = ryczalciki.value;
+    
+        switch(podatk2)
+        {
+            case 'a':
+                piniodz2 = piniodz * 0.17;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+            break;
+
+            case 'b':
+                piniodz2 = piniodz * 0.15;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+            break;
+
+            case 'c':
+            if(piniodz<100000)
+                {
+                 piniodz2 = piniodz * 0.085;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl"; 
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl"; 
+                }
+                else{
+                    piniodz2 = piniodz * 0.125;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+            
+               
+                }
+            break;
+        
+
+            case 'd':
+                piniodz2 = piniodz * 0.055;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl"; 
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl"; 
+                
+            break;
+
+            case 'e':
+                piniodz2 = piniodz * 0.02;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+
+            case 'f':
+                piniodz2 = piniodz * 0.10;
+                wynik.innerHTML = "Podatek wynosi: " +  piniodz2.toFixed(2) + "zl";
+                var piniodz3 = piniodz - piniodz2;
+                wynik2.innerHTML = "Stan konta: " +  piniodz3.toFixed(2) + "zl";
+
+            }
+            
+    }
+    
+    
+    </script>
+
+
+
+</body>
+</html>
+
