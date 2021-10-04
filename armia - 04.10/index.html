@@ -1,0 +1,74 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+function armia()
+{
+var a = parseFloat(musz.value);
+var b = parseFloat(arta.value);
+var c = parseFloat(kawa.value);
+
+wynik.innerHTML = "Armia składa się z " + a + " muszkieterów, " + b + " artylerzystów i " + c + " kawalerzystów";
+
+var d = Math.floor((Math.random() * 20) + 1);
+var e = Math.pow(a, d);
+var f = Math.pow(b, d);
+var g = Math.pow(c, d);
+
+wynik2.innerHTML = "Armia wroga składa się z "  + e + " muszkieterów, " + f + " artylerzystów i " + g + " kawalerzystów";
+
+var x = e+f+g;
+
+if(x>4000000)
+{
+    var plik = "<img src = \"armia.gif\"/>";
+    document.getElementById("stopka").innerHTML = plik;
+}
+
+
+
+}
+</script>
+
+
+
+
+</head>
+<body>
+
+    <div id="baner">
+        <a href="http://ofrancji.com/tag/strona-o-burgundii/"><img src="herb.png" alt="aa" width="100px" height="100px"></a>
+    
+    </div>
+
+    <div id="lewy">
+
+        <div id="wynik"></div>
+        <div id="wynik2"></div>
+        <div id="wynik3"></div>
+        
+       
+
+
+    </div>
+
+    <div id="prawy">
+
+        Liczba muszkieterów:<input type="number" id="musz"/><br>
+        Liczba artylerzystów:<input type="number" id="arta"/><br>
+        Liczba kawalerzystów:<input type="number" id="kawa"/><br>
+
+        <input type="submit" value="oblicz" onclick = "armia()" /> 
+
+    </div>
+
+    <div id="stopka">
+
+    </div>
+
+
+
+</body>
+
+</html>
