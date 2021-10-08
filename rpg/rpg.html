@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <style type="text/css">
+        
+        #baner{
+        background-color: lime;
+        width: 100%;
+        height: 20%;
+        float: left;
+        font-size: 100px;
+        text-align: center;
+        color: black;
+        }
+
+        #lewy{
+        background-color: lightseagreen;
+        width: 30%;
+        height: 80%;
+        float: left;
+        }
+
+        #prawy{
+        background-color: lightcoral;
+        width: 70%;
+        height: 40%;
+        float: left;
+        font-size: 30px;
+        }
+
+        #prawy2{
+        background-color: yellow;
+        width: 70%;
+        height: 40%;
+        float: left;
+        font-size: 30px;
+        }
+
+        #wynik{
+            font-size: 30px;
+        }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="baner">
+            Louda
+        </div>
+
+
+        <div id="lewy">
+    
+            <div id="wynik"></div>
+            <div id="wynik3"></div>
+    
+
+
+        </div>
+
+        <div id="kod">
+    
+           
+        </div>
+
+        <div id="prawy">
+
+            Klasa:<select id="nazwy">
+                <option value="lud">ludź</option>
+                <option value="malpa">małpiszon</option>
+            </select><br>
+
+            Imie:<input type="text" id="imiee"/><br>
+            <input type="submit" value="Lecimy" onclick = "rpg()"/> 
+
+
+        </div>
+
+        <div id="prawy2">
+            EQ:
+            <div id="wynik2"></div>
+        </div>
+
+        <script>
+            function klas(lvl, pz, sila, zrecz, intel)
+            {
+                this.lvl = lvl;
+                this.pz = pz;
+                this.sila = sila;
+                this.zrecz = zrecz;
+                this.intel = intel;
+
+            }
+
+
+            function rpg()
+            {
+                const lud = new klas("1", "40", "5", "4", "5")
+                const malpa = new klas("1", "20", "7", "5", "2")
+
+                var imie = imiee.value;
+                var klasa = nazwy.value;
+
+               
+                
+
+               
+
+                switch(klasa)
+                {
+                    case 'malpa':
+                        wynik.innerHTML = "Imie: " +imie + "<br> LVL: " + malpa.lvl + "<br>Punkty życia: " + malpa.pz + "<br>Siła: " + malpa.sila + "<br>Zręczność: " + malpa.zrecz + "<br>Inteligencja: " + malpa.intel ;
+                    
+                        break;
+
+                        case 'lud':
+                        wynik.innerHTML = "Imie: " +imie + "<br> LVL: " + lud.lvl + "<br>Punkty życia: " + lud.pz + "<br>Siła: " + lud.sila + "<br>Zręczność: " + lud.zrecz + "<br>Inteligencja: " + lud.intel;    
+                        break;
+
+
+
+                }
+
+                if(klasa=lud)
+                {
+                var plik = "<img src = \"aa.png\"/>";
+                document.getElementById("wynik3").innerHTML = "<br><br>" + plik;
+                }
+                
+            
+                
+         
+            }
+
+
+
+
+        </script>
+
+
+    </body>
+    </html>
