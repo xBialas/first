@@ -1,0 +1,57 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Sklep</h1>
+        Buła 1zł <input type="checkbox" id="bula">
+        Mleko 3zł <input type="checkbox" id="mle">
+        Chrupki 4zł <input type="checkbox"   id="chru">
+        <input type="submit" value="oblicz" onclick="oblicz()">
+        <div id="wynik"></div>
+        <div id="wynik2"></div>
+
+        <table borderline=1 bordercolor=red>
+            <tr>
+                <td>sadasd</td>
+                </tr>
+                </table>
+
+
+        <script>
+            function oblicz()
+            {
+            var aha = document.getElementById("bula");
+            var aha2 = document.getElementById("mle");
+            var aha3 = document.getElementById("chru");
+
+            var a = "w Koszyku: ";
+            var lecimy = 0;
+            
+        
+
+           
+
+            if(aha.checked)
+            {
+            a += " buła";
+            lecimy += 1;  
+            }
+
+            if(aha2.checked)
+            {
+                a += " mleko";
+                lecimy += 3;
+            }
+            
+            if(aha3.checked)
+            {
+                a += " chrupki";
+                lecimy += 4;
+            }
+            wynik.innerHTML = a;
+            wynik2.innerHTML = "Zapłacisz " +lecimy + "zł";
+        }
+        </script>
+    </body>
+</html>
